@@ -1,0 +1,26 @@
+<mat-card class="book-card">
+  <mat-card-header style="margin: 0;">
+    <mat-card-title>{{book.name}}</mat-card-title>
+    <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
+  </mat-card-header>
+  <img  [src]="book.img" [alt]="book.name">
+  <mat-card-content>
+    <h3 class="book-description__title">Description:</h3>
+    <p class="book-description__content">
+      {{book.description}}
+    </p>
+    <h3 class="book-details__title">Product details:</h3>
+    <div class="book-details__content">
+      <div>Price: {{book.price | currency}}</div>
+      <div>Publish Date: {{book.createDate | date}}</div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!book.isAvailable"
+      (click)="onBuy(book)"
+    >Buy</button>
+  </mat-card-actions>
+</mat-card>
