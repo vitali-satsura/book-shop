@@ -1,2 +1,7 @@
-<app-header></app-header>
-<app-book-list></app-book-list>
+<app-header [booksCounter]="booksCounter"></app-header>
+<h1 #appTitle class="app-title">{{title}}</h1>
+<app-book-list
+  (addBook)="getCartBooks($event)"
+  (incrementBooks)="getCounter($event)"
+></app-book-list>
+<app-cart [cart]="cart"></app-cart>

@@ -1,0 +1,33 @@
+.cart-item {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+mat-form-field {
+  width: 100px;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.cart-item-image {
+  background-size: cover;
+  margin-top: 10px;
+  display: block;
+}
+
+.cart-item-book {
+  display: flex;
+}
+
+.cart-item-name {
+  margin-top: 20px;
+  margin-left: 10px;
+  //margin-right: 100px;
+}

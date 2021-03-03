@@ -1,0 +1,36 @@
+<div class="cart-item" >
+  <div class="cart-item-book">
+    <img mat-card-avatar class="cart-item-image" [src]="cartItem.book.img">
+    <div class="cart-item-name">{{cartItem.book.name}}</div>
+  </div>
+  <div class="cart-item-actions">
+    <mat-form-field>
+      <button
+        mat-button
+        mat-icon-button
+        matPrefix
+        aria-label="Remove"
+        [color]="getColor()"
+        (click)="incrementValue(-step)"
+        [disabled]="shouldDisableDecrement(value)">
+        <mat-icon>remove</mat-icon>
+      </button>
+      <input matInput type="number" [(ngModel)]="cartItem.count" (focus)="setColor('primary')" (blur)="setColor('default')" />
+      <button
+        mat-button
+        mat-icon-button
+        matSuffix
+        aria-label="Add"
+        [color]="getColor()"
+        (click)="incrementValue(step)"
+      >
+        <mat-icon>add</mat-icon>
+      </button>
+    </mat-form-field>
+    <button
+      mat-button
+      (click)="onDelete(cartItem)"
+    ><mat-icon>delete</mat-icon></button>
+  </div>
+</div>
+<mat-divider></mat-divider>

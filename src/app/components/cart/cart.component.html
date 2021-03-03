@@ -1,0 +1,14 @@
+<mat-card class="cart"
+     fxLayout="column"
+     fxLayoutAlign="flex-start">
+  <h2 class="cart-title">Cart</h2>
+
+  <div mat-subheader class="cart-subtitle">Books</div>
+  <ng-container *ngFor="let cartItem of cart">
+    <app-cart-item
+      [cartItem]="cartItemCopy(cartItem)"
+      (deleteBook)="removeBook($event)"
+    ></app-cart-item>
+  </ng-container>
+
+</mat-card>
