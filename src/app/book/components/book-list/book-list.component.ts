@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { IBook } from '../../models/book';
-import { books } from '../../shared/data/books';
-import { ICartBook } from '../../models/cartBook';
+import { books } from '../../../shared/data/books';
+import { ICartBook } from '../../../cart/models/cartBook';
 
 @Component({
   selector: 'app-book-list',

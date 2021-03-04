@@ -1,5 +1,5 @@
-import { IBook } from '../../models/book';
-import { Category } from '../../models/category';
+import { IBook } from '../../book/models/book';
+import { Category } from '../../book/models/category';
 
 export const books: IBook[] = [
   {

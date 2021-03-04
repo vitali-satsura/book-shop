@@ -1,4 +1,4 @@
-import { IBook } from './book';
+import { IBook } from '../../book/models/book';
 
 export interface ICartBook {
   book: IBook;

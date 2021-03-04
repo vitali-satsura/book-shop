@@ -6,27 +6,29 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './shared/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './core/components/header/header.component';
-import { BookListComponent } from './components/book-list/book-list.component';
-import { BookComponent } from './components/book/book.component';
-import { CartComponent } from './components/cart/cart.component';
-import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { BookListComponent } from './book/components/book-list/book-list.component';
+import { BookComponent } from './book/components/book/book.component';
+import { CartComponent } from './cart/components/cart/cart.component';
+import { CartItemComponent } from './cart/components/cart-item/cart-item.component';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
+import { BookModule } from './book/book.module';
+import { CartModule } from './cart/cart.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    BookListComponent,
-    BookComponent,
-    CartComponent,
-    CartItemComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    SharedModule,
+    BookModule,
+    CartModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
